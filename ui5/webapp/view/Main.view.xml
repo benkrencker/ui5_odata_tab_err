@@ -1,0 +1,84 @@
+<mvc:View 
+	controllerName="ui5.error.test.ui5.controller.Main" 
+	xmlns="sap.m" 
+	xmlns:f="sap.f" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:table="sap.ui.table"
+	displayBlock="true" >
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="SAPUI5 Table Relative Binding Problem">
+					<content>
+						<table:Table
+							id="idPeopleTable"
+							rows="{/Authors}"
+							selectionMode="Single"
+							rowSelectionChange=".onUserSelection"
+							selectionBehavior="Row"
+							class="sapUiSizeCondensed"
+							enableSelectAll="false"
+							enableCellFilter="true"
+							enableColumnFreeze="true"
+							enableColumnReordering="true"
+							visibleRowCountMode="Fixed"
+							visibleRowCount="10"
+							showNoData="true"
+							showColumnVisibilityMenu="true">
+							
+							<table:columns>
+								<table:Column
+									sortProperty="ID"
+									filterProperty="ID"
+									autoResizable="true">
+									<Label text="ID" />
+									<table:template>
+										<Text text="{ID}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									sortProperty="name"
+									filterProperty="name"
+									autoResizable="true">
+									<Label text="name" />
+									<table:template>
+										<Text text="{name}"/>
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>	
+						
+						<table:Table
+							id="idFriendsTable"
+							rows="{books}"
+							class="sapUiSizeCondensed"
+							enableSelectAll="true"
+							selectionMode="MultiToggle"
+							selectionBehavior="Row"
+							enableCellFilter="true"
+							enableColumnFreeze="true"
+							enableColumnReordering="true"
+							visibleRowCountMode="Fixed"
+							visibleRowCount="10"
+							showNoData="true"
+							showColumnVisibilityMenu="true">
+							
+							<table:columns>
+								<table:Column
+									sortProperty="title"
+									filterProperty="title"
+									autoResizable="true">
+									<Label text="title" />
+									<table:template>
+										<Text text="{title}"/>
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
