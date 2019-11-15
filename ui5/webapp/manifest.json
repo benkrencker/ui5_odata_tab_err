@@ -76,6 +76,16 @@
 					"synchronizationMode": "None",
 					"autoExpandSelect": true
 				}
+			},
+			"Book": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"operationMode": "Server",
+					"groupId": "$direct",
+					"synchronizationMode": "None",
+					"autoExpandSelect": true
+				}
 			}
 		},
 		"routing": {
