@@ -13,7 +13,7 @@
 					<content>
 						<table:Table
 							id="idPeopleTable"
-							rows="{Book>/Authors}"
+							rows="{/Authors}"
 							selectionMode="Single"
 							rowSelectionChange=".onUserSelection"
 							selectionBehavior="Row"
@@ -34,7 +34,7 @@
 									autoResizable="true">
 									<Label text="ID" />
 									<table:template>
-										<Text text="{Book>ID}"/>
+										<Text text="{ID}"/>
 									</table:template>
 								</table:Column>
 								<table:Column
@@ -43,7 +43,7 @@
 									autoResizable="true">
 									<Label text="name" />
 									<table:template>
-										<Text text="{Book>name}"/>
+										<Text text="{name}"/>
 									</table:template>
 								</table:Column>
 							</table:columns>
@@ -51,7 +51,7 @@
 						
 						<table:Table
 							id="idFriendsTable"
-							rows="{Book>books}"
+							rows="{books}"
 							class="sapUiSizeCondensed"
 							enableSelectAll="true"
 							selectionMode="MultiToggle"
@@ -71,7 +71,7 @@
 									autoResizable="true">
 									<Label text="title" />
 									<table:template>
-										<Text text="{Book>title}"/>
+										<Text text="{title}"/>
 									</table:template>
 								</table:Column>
 							</table:columns>

@@ -18,7 +18,6 @@ modules:
           forwardAuthToken: true
           name: srv_api
           url: '~{url}'
-      - name: uaa_ui5tableerror
   - name: ui5tableerror_ui_deployer
     type: com.sap.html5.application-content
     path: ui5tableerror_ui_deployer
@@ -72,12 +71,6 @@ resources:
     type: com.sap.xs.hdi-container
     properties:
       hdi-container-name: '${service-name}'
-  - name: uaa_ui5tableerror
-    parameters:
-      path: ./xs-security.json
-      service-plan: application
-      service: xsuaa
-    type: org.cloudfoundry.managed-service
   - name: dest_ui5tableerror
     parameters:
       service-plan: lite

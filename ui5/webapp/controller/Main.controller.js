@@ -10,7 +10,7 @@ sap.ui.define([
 		
 		onUserSelection: function(oEvent) {
 			var oContext = oEvent.getParameter("rowContext");
-			this.byId("idFriendsTable").setBindingContext(oContext, "Book");
+			this.byId("idFriendsTable").setBindingContext(oContext);
 		}
 	});
 });
